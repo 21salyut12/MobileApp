@@ -1,10 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
+// App.js
+import React, { useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import BluetoothManager from './BluetoothManager'; // Update the path accordingly
 
 export default function App() {
+  useEffect(() => {
+    // Call BluetoothManager when the component mounts
+    BluetoothManager();
+  }, []);
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Hello!</Text>
       <StatusBar style="auto" />
     </View>
   );
